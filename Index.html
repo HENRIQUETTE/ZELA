@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECLORE & Bureaucrates — Édition Spéciale</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>ECLORE</h1>
+        <p class="subtitle">La quête douce de la confiance (et des tampons administratifs)</p>
+    </header>
+
+    <div class="content">
+        <!-- ONGLET 1 : LES DÉFIS / FORMULAIRES -->
+        <div id="tab-defi" class="tab-content active">
+            <div class="card">
+                <span class="badge" id="week-label">Quête 1 : Te reconnecter à toi</span>
+                <h2 id="day-label" class="challenge-title">FORMULAIRE N°1</h2>
+                <p id="challenge-text" class="challenge-desc">Écris 3 choses que tu aimes chez toi, même petites.</p>
+                <button id="btn-done">Tamponner & Valider ✓</button>
+            </div>
+            <div class="nav-buttons">
+                <button id="btn-prev" class="btn-secondary">Précédent</button>
+                <button id="btn-next">Suivant</button>
+            </div>
+        </div>
+
+        <!-- ONGLET 2 : LE JOURNAL INTIME -->
+        <div id="tab-journal" class="tab-content">
+            <h3>Journal Intime (Strictement Confidentiel)</h3>
+            <p class="info-text">Note 3 lignes sur ton avancée, sans stress ni jugement.</p>
+            <textarea id="journal-input" placeholder="Comment s'est passée ta journée ?..."></textarea>
+            <button id="btn-save-journal">Archiver dans le dossier</button>
+            <div id="journal-list"></div>
+        </div>
+
+        <!-- ONGLET 3 : SUIVI DES HABITUDES -->
+        <div id="tab-habitudes" class="tab-content">
+            <h3>Progression du Quotidien</h3>
+            <div class="card">
+                <div class="habit-item"><input type="checkbox"> Je me suis habillé proprement (Armure polie)</div>
+                <div class="habit-item"><input type="checkbox"> J'ai fait 10 min de marche (Évasion de la forteresse)</div>
+                <div class="habit-item"><input type="checkbox"> Je me suis parlé positivement (Sort de bouclier)</div>
+                <div class="habit-item"><input type="checkbox"> J'ai appris un mot nouveau (Nouveau sort mémorisé)</div>
+            </div>
+        </div>
+
+        <!-- ONGLET 4 : ESPACE CALME -->
+        <div id="tab-calme" class="tab-content">
+            <h3>Sanctuaire de Méditation</h3>
+            <div class="card text-center">
+                <p>Reprends ton souffle face au chaos du monde extérieur.</p>
+                <h1 id="timer">02:00</h1>
+                <button id="btn-timer">Lancer la respiration</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVIGATION EN BAS -->
+    <nav>
+        <button class="nav-tab active" data-tab="defi">📜 Quêtes</button>
+        <button class="nav-tab" data-tab="journal">📖 Journal</button>
+        <button class="nav-tab" data-tab="habitudes">☑️ Progrès</button>
+        <button class="nav-tab" data-tab="calme">🧘 Sanctuaire</button>
+    </nav>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
